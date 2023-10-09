@@ -1,0 +1,48 @@
+{
+  "src/assets/logo.png": {
+    "file": "logo-03d6d6da.png",
+    "src": "src/assets/logo.png"
+  },
+  "src/main.css": {
+    "file": "main-910f0602.css",
+    "src": "src/main.css"
+  },
+  "src/main.js": {
+    "css": [
+      "main-910f0602.css"
+    ],
+    "dynamicImports": [
+      "src/views/HomeView.vue",
+      "src/views/AboutView.vue"
+    ],
+    "file": "main.js",
+    "isEntry": true,
+    "src": "src/main.js"
+  },
+  "src/views/AboutView.vue": {
+    "file": "AboutView-ed889ff7.js",
+    "imports": [
+      "src/main.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/AboutView.vue"
+  },
+  "src/views/HomeView.css": {
+    "file": "HomeView-ed808a8b.css",
+    "src": "src/views/HomeView.css"
+  },
+  "src/views/HomeView.vue": {
+    "assets": [
+      "logo-03d6d6da.png"
+    ],
+    "css": [
+      "HomeView-ed808a8b.css"
+    ],
+    "file": "HomeView-deb404c7.js",
+    "imports": [
+      "src/main.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/HomeView.vue"
+  }
+}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="layout::common_header(~{::title})">
+    <!-- vueのslotのようにHTMLをパラメタにする -->
+    <title>SpringBoot+Vite</title>
+  </head>
+
+  <body th:replace="layout::common_body(~{::main}, ~{::script})">
+    <!-- １つ目のパラメタ -->
+    <main id="app"></main>
+
+    <!-- ２つ目のパラメタ -->
+    <script type="module" src="http://localhost:8089/src/main.js"></script>
+  </body>
+</html>

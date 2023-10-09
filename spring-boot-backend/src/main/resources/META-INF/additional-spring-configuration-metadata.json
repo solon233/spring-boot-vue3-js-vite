@@ -1,0 +1,19 @@
+{
+  "properties": [
+    {
+      "name": "spring.initialization-mode",
+      "type": "java.lang.String",
+      "description": "A description for 'spring.initialization-mode'"
+    },
+    {
+      "name": "h2.console.enabled",
+      "type": "java.lang.String",
+      "description": "A description for 'h2.console.enabled'"
+    },
+    {
+      "name": "h2.console.path",
+      "type": "java.lang.String",
+      "description": "A description for 'h2.console.path'"
+    }
+  ]
+}
