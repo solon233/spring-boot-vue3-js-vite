@@ -5,6 +5,8 @@ server:
   port: 8080
   servlet:
     context-path: /customer
+  mode:
+    development: true
 ####################
 # MyBatisの設定
 ####################

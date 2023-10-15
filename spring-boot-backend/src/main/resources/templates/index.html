@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
-  <head th:replace="layout::common_header(~{::title})">
-    <!-- vueのslotのようにHTMLをパラメタにする -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>SpringBoot+Vite</title>
+
+    <th:block th:if="${mode == 'development'}">
+      <script type="module" src="http://localhost:8089/@vite/client"></script>
+      <script type="module" src="http://localhost:8089/main.js"></script>
+    </th:block>
+
+    <th:block th:if="${mode == 'production'}">
+      <th:block th:replace="production::production_header" />
+    </th:block>
   </head>
 
-  <body th:replace="layout::common_body(~{::main}, ~{::script})">
-    <!-- １つ目のパラメタ -->
+  <body>
+    <h2
+      th:text="'都道府県コード: ' + ${form.code} + ' の名称は ' + ${form.name} + ' です'"
+    />
     <main id="app"></main>
-
-    <!-- ２つ目のパラメタ -->
-    <script type="module" src="http://localhost:8089/src/main.js"></script>
   </body>
 </html>

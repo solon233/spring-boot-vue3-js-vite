@@ -3,12 +3,15 @@ package com.example.demo.controller;
 import java.text.SimpleDateFormat;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.example.demo.constants.enums.EnumsServerMode;
 import com.example.demo.object.bean.IndexServiceOutput;
+import com.example.demo.object.form.IndexForm;
 import com.example.demo.service.IndexService;
 
 @Controller
@@ -16,6 +19,9 @@ import com.example.demo.service.IndexService;
 public class IndexController {
 
 	private final IndexService indexService;
+
+	@Value("${server.mode.development:true}")
+	private boolean isDevelopment;
 
 	@Autowired
 	public IndexController(IndexService indexService) {
@@ -40,9 +46,14 @@ public class IndexController {
 		// ページ名
 		mav.setViewName("index");
 		// 属性情報
-		mav.addObject("code", code);
-		mav.addObject("name", output.getPref());
-		mav.addObject("time", new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(output.getUpdateTime()));
+		mav.addObject("mode",
+				isDevelopment ? EnumsServerMode.DEVELOPMENT.getMode() : EnumsServerMode.PRODUCTION.getMode());
+		mav.addObject("form", IndexForm.builder()
+				.code(code)
+				.name(output.getPref())
+				.time(new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(output.getUpdateTime()))
+				.build());
+
 		return mav;
 
 	}
