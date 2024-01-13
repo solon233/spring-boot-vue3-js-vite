@@ -90,6 +90,7 @@ export default defineConfig({
         alias: {
             "@": resolvePath("src"),
             "@asset": resolvePath("src/assets"),
+            "@svg": resolvePath("src/assets/svg"),
             "@config": resolvePath("src/config"),
             "@comp": resolvePath("src/components"),
             "@view": resolvePath("src/views"),

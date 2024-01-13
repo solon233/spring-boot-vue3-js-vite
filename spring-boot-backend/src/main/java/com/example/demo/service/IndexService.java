@@ -18,8 +18,7 @@ public class IndexService {
 	 * コンストラクタ
 	 * @param mPrefDao
 	 */
-	@Autowired
-	public IndexService(MPrefDao mPrefDao) {
+	public IndexService(@Autowired MPrefDao mPrefDao) {
 		this.mPrefDao = mPrefDao;
 	}
 

@@ -30,3 +30,6 @@ index.htmlに存在するThymeleafの前後２重アンダーバーはプリプ�
 [Thymeleafチートシート](https://qiita.com/NagaokaKenichi/items/c6d1b76090ef5ef39482#%E3%83%97%E3%83%AA%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0)
 
 
+[B6：テストを自動化するのをやめ、自動テストを作ろう - JTF2020](https://www.youtube.com/watch?v=WJshz4klFe8)
+
+テスト自動化の具体的に考え方がまとまっていると思います

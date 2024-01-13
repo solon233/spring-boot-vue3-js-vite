@@ -23,8 +23,8 @@ public class IndexController {
 	@Value("${server.mode.development:true}")
 	private boolean isDevelopment;
 
-	@Autowired
-	public IndexController(IndexService indexService) {
+	
+	public IndexController(@Autowired IndexService indexService) {
 		this.indexService = indexService;
 	}
 
